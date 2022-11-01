@@ -79,7 +79,43 @@ p {
     cursor: pointer;
   }
 }
+.snipcart-checkout {
+  display: flex;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  line-height: 24px;
+  border:none;
+  border-radius :30px;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+.snipcart-checkout img {
+  height: auto;
+  width: 45px;
+}
 
+.snipcart-add-item {
+  display: flex;
+  color: #fff;
+  color: var(--color-buttonPrimary,#fff);
+  border-color: transparent;
+  border-color: var(--borderColor-buttonPrimary,transparent);
+  background-color: black;
+  background-color: var(--bgColor-buttonPrimary, #000);
+  padding: 15px;
+  border: 0px solid;
+  border-radius :25px;
+  cursor: pointer;
+  transition: .3s ease-out;
+  transition-property: color,border-color,background-color,box-shadow;
+  margin-left: 0px;
+}
+
+svg {
+  padding: 6px;
+}
 /*---media query for less than 600 screen size---*/
 @media only screen and (max-width: 600px){
   .img-cart{
