@@ -1,3 +1,4 @@
+/*-----Overall-----*/
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +6,10 @@
 }
 body {
   flex: 1;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(rgb(163, 162, 162), #000000)
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  flex: 1;
-  border-bottom: 2px solid black;
-}
-.navbar a{
-  color: rgb(255, 255, 255);
+  font-family: montserrat;
 }
 h1 {
   font-size: 50px;
-}
-nav {
-  flex: 1;
-  text-align: right;
-}
-nav ul {
-  margin-top: auto;
-  display: inline-block;
-  list-style-type: none;
-}
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
 }
 a {
   color: #fff;
@@ -42,53 +19,122 @@ p {
   font-size: 16px;
   color: rgb(255, 255, 255);
 }
-.img-cart{
+.background{
+  background: radial-gradient(rgb(201, 198, 198), black);
+}
+/*-----END Overall-----*/
+
+
+
+
+
+/*-----Navbar-----*/
+nav {
+  height: 150px;
+  width: 100%;
+  background: #757474;
+}
+label .logo {
+  width: 250px;
+  height: auto;
+  padding: 0 40px;
+}
+nav ul{
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+}
+nav li{
   display: inline-block;
-  width: 100px;
-  height: auto;
+  margin: 0 8px;
+  line-height: 149px;
 }
-.logo{
-  width: 70px;
-  height: auto;
+nav a{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight:500;
+  border: 1px solid transparent ;
+  padding: 7px 10px;
+  border-radius: 3px;
 }
-.menu-icon{
-  width: 70px;
-  height: 70px;
-  margin-left: 0;
+a.active, .navbar-a:hover{
+  border: 1px solid white;
+  transition: .6s;
+}
+#menu img{
+  width: 45px;
+  height: auto;
+  float: right;
+  margin-right: 40px;
+  padding-top: 50px;
+  cursor: pointer;
   display: none;
 }
+/*-----END Navbar-----*/
+
+
+
+
+
 /*---media query for menu---*/
-@media only screen and (max-width: 800px) {
-  .logo{
-    display: block;
-  }
-  .img-cart{
-    display: block;
-    padding-left: 70px;
-  }
-  .menu-icon{
-    display: block;
-    cursor: pointer;
+@media only screen and (max-width: 1048px) {
+  label.logo{
+    width: 200px;
+    height: auto;
+    padding-left: 60px;
   }
   nav ul{
-    position: absolute;
-    top: auto;
-    right: 50px;
-    background: transparent;
-    width: 100%;
-    overflow: hidden;
-    transition: max-height 0.5s;
+    margin-right: 20px;
   }
-  nav ul li{
-    display: block;
-    margin-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  nav ul li a{
-    color: rgb(255, 255, 255);
+  nav a{
+    font-size: 17px;
   }
 }
+
+
+@media only screen and (max-width: 909px) {
+  nav #menu img{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #5a5a5a;
+    top: 150px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav a{
+    font-size: 20px;
+  }
+  a.active, .navbar-a:hover{
+    border: none;
+    color: black;
+  }
+  nav ul.show{
+    left: 0;
+  }
+  .row{
+    text-align: center;
+  }
+  .col-2, .col-3, .col-4{
+    flex-basis: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+
+
+
+/*--- Cart---*/
 #snipcart {
   /* ----------------- 
       Colors
@@ -299,31 +345,11 @@ p {
 svg {
   padding: 6px;
 }
+/*---END cart---*/
 
-/*---media query for less than 600 screen size---*/
-@media only screen and (max-width: 600px){
-  .img-cart{
-    display: block;
-    padding-left: 70px;
-  }
-  .row{
-    text-align: center;
-  }
-  .col-2, .col-3, .col-4{
-    flex-basis: 100%;
-    width: auto;
-    height: auto;
-  }
-  nav ul{
-    position: absolute;
-    top: auto;
-    left: 0;
-    background: transparent;
-    width: 100%;
-    overflow: hidden;
-    transition: max-height 0.5s;
-  }
-}
+
+
+
 
 /*--- categories---*/
 .categories {
